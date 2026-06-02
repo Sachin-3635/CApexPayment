@@ -925,7 +925,7 @@ const EditAdvanceForm = ({ context, formData, onClose }: any) => {
                       onChange={(e) =>
                         setFinalPayment(e.target.value === "Yes")
                       }
-                      className="form-control"
+                      className="formtext-control"
                     >
                       <option value="No">No</option>
                       <option value="Yes">Yes</option>
@@ -1023,12 +1023,12 @@ const EditAdvanceForm = ({ context, formData, onClose }: any) => {
               </div>
               <div className="heading1" style={{ marginTop: "10px" }}>
                 <label>Upload Document</label>
-                <span className="required">*</span>
+                
               </div>
               <div className="main-formcontainer">
                 <div className="row mb-20">
                   <div className="col-md-4">
-                    <label className="font">Attachments</label>
+                    <label className="font">Attachments <span className="required">*</span></label>
                     {attachments.length > 0 && (
                       <ul>
                         {attachments.map((file: any, index: number) => (
@@ -1057,7 +1057,7 @@ const EditAdvanceForm = ({ context, formData, onClose }: any) => {
                     <input
                       type="file"
                       multiple
-                      className="form-control"
+                      style={{height :"34px", padding: "3px"}}
                       onChange={(e) => {
                         if (e.target.files) {
                           setSelectedFiles(Array.from(e.target.files));
